@@ -1,4 +1,4 @@
-import { inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
 
@@ -9,7 +9,7 @@ export class Icons {
   private iconRegistry = inject(MatIconRegistry);
   private sanitizer = inject(DomSanitizer);
 
-  icons: string[] = ['angular', 'css', 'git', 'html', 'javascript', 'tailwind', 'typescript'];
+  icons: string[] = ['angular', 'css', 'git', 'html', 'javascript', 'tailwind', 'typescript', 'discord', 'instagram', 'linkedin', 'reddit', 'telegram', 'email'];
 
   constructor() {
     this.registerIcons();
