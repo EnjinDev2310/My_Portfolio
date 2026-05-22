@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { SProject } from '../../services/sproject';
 
 @Component({
   selector: 'app-proyects',
@@ -6,4 +7,7 @@ import { Component } from '@angular/core';
   templateUrl: './proyects.html',
   styleUrl: './proyects.css',
 })
-export class Proyects {}
+export class Proyects {
+  readonly projectService = inject(SProject);
+  readonly projects = this.projectService.projects();
+}

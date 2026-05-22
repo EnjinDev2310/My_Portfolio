@@ -1,1 +1,36 @@
-<p>about works!</p>
+<section class="flex max-w-xl md:max-w-2xl flex-col pt-20 my-4 mx-auto gap-2 items-center justify-between">
+    <app-profile-rounded></app-profile-rounded>
+    <h1 class="text-4xl font-bold mb-2">
+        enjin.dev <span class="text-neon">/&gt;</span>
+    </h1>
+    <p class="text-text-secondary text-lg">Frontend Developer</p>
+    <div class="flex flex-col gap-5 mb-12">
+        <p class="text-text-secondary leading-relaxed text-base">
+            Desde que escribí mi primer <code
+                class="text-neon bg-neon/10 px-1.5 py-0.5 rounded text-sm">&lt;h1&gt;Hola Mundo&lt;/h1&gt;</code>,
+            supe que el desarrollo era mi camino. Me fascina cómo un diseño bien pensado
+            puede transformar una experiencia digital — y me obsesiono con los detalles que hacen
+            que esa experiencia sea inolvidable.
+        </p>
+        <p class="text-text-secondary leading-relaxed text-base">
+            Hoy, con más de dos años construyendo interfaces modernas, me especializo en Angular
+            y ecosistema TypeScript. Creo en escribir código limpio, componentes reutilizables
+            y arquitecturas que escalan sin volverse un dolor de cabeza. Cada proyecto es una
+            oportunidad para aprender algo nuevo y hacerlo mejor que el anterior.
+        </p>
+        <p class="text-text-secondary leading-relaxed text-base">
+            Cuando no estoy codeando, me encuentro explorando nuevas herramientas, contribuyendo
+            a proyectos open source, o pensando en cómo mejorar el rendimiento de algo que ya
+            funciona bien. Porque siempre se puede hacer mejor.
+        </p>
+        <div class="grid grid-cols-3 gap-4 max-sm:grid-cols-1">
+            @for (metric of metrics; track metric.label) {
+            <div
+                class="text-center p-6 bg-surface border border-border rounded-xl transition-all duration-200 hover:border-neon hover:shadow-[0_0_15px_rgba(0,255,65,0.1)]">
+                <span class="block text-3xl font-extrabold text-neon mb-1">{{ metric.value }}</span>
+                <span class="text-sm text-text-secondary">{{ metric.label }}</span>
+            </div>
+            }
+        </div>
+    </div>
+</section>

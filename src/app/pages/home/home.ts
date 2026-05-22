@@ -8,5 +8,4 @@ import { SkillsComponent } from '../../components/skills-component/skills-compon
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home {
-}
+export class Home { }
