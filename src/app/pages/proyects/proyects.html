@@ -1,1 +1,65 @@
-<p>proyects works!</p>
+<section class="relative flex min-h-screen pt-24 pb-16 justify-center overflow-hidden">
+    <div aria-hidden="true" class="
+    absolute
+    top-0
+    right-0
+    max-w-xl
+    md:max-w-3xl
+    max-[900px]:w-[60%]
+    w-[45%]
+    h-full
+    bg-[url('/img/profile/profile2.png')]
+    bg-center
+    bg-no-repeat
+    bg-cover
+    opacity-50
+    pointer-events-none
+    mask-[linear-gradient(to_left,black_40%,transparent_85%)]
+    [-webkit-mask-image:linear-gradient(to_left,black_40%,transparent_85%)]
+    filter-[grayscale(0.5)_contrast(1.2)]
+  "></div>
+    <div class="max-w-150 md:max-w-180 w-full">
+        <h1 class="text-3xl font-bold mb-2">
+            <span class="text-neon">/</span> Proyectos Destacados
+        </h1>
+        <p class="text-text-secondary mb-12 text-base">
+            Algunos de los proyectos en los que he trabajado
+        </p>
+
+        <div class="grid lg:grid-cols-2 grid-cols-[repeat(auto-fill,minmax(80px,400px))] gap-6">
+            @for (project of projects; track project.title) {
+            <div class="bg-surface border border-border rounded-xl overflow-hidden transition-all duration-200 flex flex-col hover:scale-110"
+                [style.--card-accent]="project.color">
+                <div class="h-36 flex items-center justify-center relative overflow-hidden"
+                    [style.background]="'linear-gradient(135deg, ' + project.color + '22, ' + project.color + '44)'">
+                    <div
+                        class="w-18 h-18 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center border-2 border-white/10">
+                        <span class="text-3xl font-extrabold text-white/80">{{ project.title.charAt(0) }}</span>
+                    </div>
+                </div>
+                <div class="p-5 flex-1">
+                    <h3 class="text-lg font-semibold mb-2">{{ project.title }}</h3>
+                    <p class="text-sm text-text-muted leading-relaxed mb-4">{{ project.description }}</p>
+                    <div class="flex flex-wrap gap-1.5">
+                        @for (tag of project.tags; track tag) {
+                        <span class="text-xs px-2 py-2 bg-white/6 text-text-secondary rounded font-medium">{{ tag
+                            }}</span>
+                        }
+                    </div>
+                </div>
+                <div class="px-5 py-3 border-t border-border">
+                    <a class="inline-flex items-center gap-1.5 text-sm font-medium no-underline transition-all duration-200 hover:gap-2"
+                        [style.color]="project.color" href="#">
+                        Ver proyecto
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+
+</section>

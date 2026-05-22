@@ -1,0 +1,5 @@
+
+.project-card:hover {
+  border-color: var(--card-accent, #00ff41);
+  box-shadow: 0 0 30px color-mix(in srgb, var(--card-accent, #00ff41) 20%, transparent);
+}

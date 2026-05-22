@@ -1,1 +1,44 @@
-<p>experience works!</p>
+<section class="min-h-screen pt-24 pb-12 px-6 flex justify-center">
+    <div class="max-w-xl md:max-w-2xl w-full">
+        <h1 class="text-3xl font-bold mb-2">
+            <span class="text-neon">/</span> Experiencia Profesional
+        </h1>
+        <p class="text-text-secondary mb-12 text-base">Mi trayectoria en el mundo del desarrollo</p>
+
+        <div class="relative pl-8">
+            <span
+                class="absolute left-2 top-0 bottom-0 w-0.5 pointer-events-none bg-linear-to-b from-neon via-border to-transparent"></span>
+
+            @for (exp of experiences; track exp.period) {
+            <div class="relative mb-10 pl-6">
+                <div class="absolute -left-8 top-1 w-4 h-4 rounded-full bg-bg-primary border-2 border-neon flex items-center justify-center"
+                    [class.!bg-neon]="exp.current" [class.shadow-[0_0_12px_rgba(0,255,65,0.4)]!]="exp.current">
+                    @if (exp.current) {
+                    <span class="dot-pulse"></span>
+                    }
+                </div>
+
+                <div
+                    class="bg-surface border border-border rounded-xl p-6 transition-all duration-200 hover:border-neon hover:shadow-[0_0_15px_rgba(0,255,65,0.08)]">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-sm font-medium text-neon">{{ exp.period }}</span>
+                        @if (exp.current) {
+                        <span
+                            class="text-xs px-2.5 py-1 bg-neon/15 text-neon rounded-full font-semibold uppercase tracking-wide">Actual</span>
+                        }
+                    </div>
+                    <h3 class="text-lg font-semibold mb-1">{{ exp.role }}</h3>
+                    <p class="text-sm text-text-secondary mb-3">{{ exp.company }}</p>
+                    <p class="text-sm text-text-muted leading-relaxed mb-4">{{ exp.description }}</p>
+                    <div class="flex flex-wrap gap-2">
+                        @for (tag of exp.tags; track tag) {
+                        <span class="text-xs px-2.5 py-1 bg-neon/8 text-neon-dim rounded font-medium">{{ tag }}</span>
+                        }
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+
+    </div>
+</section>

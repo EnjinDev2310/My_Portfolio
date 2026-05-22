@@ -10,17 +10,13 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class HeaderNav {
   readonly links;
-
-  readonly isMenuOpen = signal(false);
-
   constructor(readonly navService: NavService) {
     this.links = this.navService.links();
   }
-
+  readonly isMenuOpen = signal(false);
   toggleMenu(): void {
     this.isMenuOpen.update((v) => !v);
   }
-
   closeMenu(): void {
     this.isMenuOpen.set(false);
   }
