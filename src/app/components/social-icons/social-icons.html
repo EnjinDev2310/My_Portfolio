@@ -1,0 +1,16 @@
+<div class="flex relative justify-between max-w-xl w-full md:max-w-2xl items-center mx-0.5 gap-8">
+    @for (icon of social; track icon.name) {
+    <a [style.--brand]="icon.color"
+        class="social-link hover:-translate-y-1.5 hover:scale-105 transition-all duration-200" [href]="icon.url"
+        target="_blank" rel="noopener" [attr.aria-label]="icon.name">
+        <div
+            class="social-icon-wrapper relative w-12 h-12 rounded-xl flex items-center justify-center bg-white/4 border border-white/4 transition-all duration-[0.35s]">
+            <mat-icon class="social-icon transition-all" [svgIcon]="icon.icon">
+            </mat-icon>
+        </div>
+        <span
+            class="social-label relative text-[0.7rem] font-medium tracking-[0.3px] opacity-0 translate-y-1 transition-all duration-300">{{
+            icon.name }}</span>
+    </a>
+    }
+</div>

@@ -1,0 +1,44 @@
+.social-link:hover .social-icon-wrapper {
+  background: color-mix(in srgb, var(--brand) 25%, transparent) !important;
+  box-shadow: 0 0 24px color-mix(in srgb, var(--brand) 50%, transparent);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.social-link:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+.social-link:hover .social-icon {
+  transform: scale(1.2);
+  color: var(--brand);
+}
+
+.social-link:hover .social-label {
+  opacity: 1;
+  transform: translateY(0);
+  color: var(--brand);
+}
+
+@media (max-width: 640px) {
+  .social-link {
+    flex: 1 0 calc(33% - 0.5rem);
+    min-width: 70px;
+    padding: 0.5rem 0.65rem;
+  }
+
+  .social-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  .social-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .social-label {
+    font-size: 0.65rem;
+  }
+}
