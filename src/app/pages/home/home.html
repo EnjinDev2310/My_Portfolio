@@ -1,0 +1,25 @@
+<section class="relative group min-h-screen flex flex-col items-center justify-center px-8 pt-24 pb-16 overflow-hidden">
+    <div class="
+      absolute inset-0 pointer-events-none
+      bg-[url('/img/startup.png')]
+      bg-cover bg-no-repeat bg-position-[center_90%]
+      opacity-45
+      [mask:radial-gradient(ellipse_75%_60%_at_50%_42%,black_28%,transparent_80%)">
+    </div>
+    <div class="text-center max-w-175 scale-3d my-20">
+        <h1 class="text-text-primary text-2xl font-medium mb-2">Hola, soy EnjinDev</h1>
+        <h2 class="flex text-xl flex-col gap-0 mb-4">
+            <span class="">Frontend</span>
+            <span class="text-neon-dim">Developer</span>
+        </h2>
+        <p class="font-mono font-bold group text-[#77fc18] ">Enfocado en Angular, TypeScript y arquitectura escalable.
+            Diseño interfaces eficientes, accesibles y optimizadas para ofrecer productos sólidos y de alta calidad.</p>
+        <div class="flex mt-4 p-4 gap-4 justify-center flex-wrap">
+            <a class="inline-block bg-transparent no-underline transition-all hover:bg-neon-dim hover:text-black hover:scale-110 rounded-xl p-2"
+                routerLink="/proyects">Ver Proyectos</a>
+            <a class="inline-block bg-transparent no-underline transition-all hover:bg-neon-dim hover:text-black hover:scale-110 rounded-xl p-2"
+                routerLink="/about">Sobre Mi</a>
+        </div>
+    </div>
+    <app-skills-component></app-skills-component>
+</section>

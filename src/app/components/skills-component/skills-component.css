@@ -1,0 +1,10 @@
+@media (max-width: 640px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)) !important;
+    gap: 0.75rem !important;
+  }
+
+  .skill-card {
+    padding: 1rem 0.5rem !important;
+  }
+}

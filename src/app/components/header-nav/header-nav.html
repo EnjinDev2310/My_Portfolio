@@ -1,0 +1,29 @@
+<header class="p-4 max-w-300 z-100 fixed top-0 left-0 right-0">
+    <nav class="flex flex-row justify-between mx-2">
+        <div class="items-center w-full gap-2 mx-2 flex justify-between">
+            <a routerLink="/" (click)="closeMenu()">
+                <span class="font-light text-neon">&lt;</span>
+                <span class=" tracking-[-0.5px]">/enjin.dev</span>
+                <span class="font-light text-neon">&gt;</span>
+            </a>
+            <button aria-label="Toggle menu"
+                class="md:hidden p-2 rounded-lg hover:bg-[#009024] flex-col flex gap-1.5 bg-transparent border-none cursor-pointer"
+                [class.active]="isMenuOpen()" (click)="toggleMenu()">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="flex items-center gap-1 list-none nav-links" [class.open]="isMenuOpen()">
+                @for (link of links; track link.path) {
+                <li>
+                    <a class="no-underline text-lg text-text-secondary text-[16px] font-medium p-4 rounded-2xl transition-all duration-200  hover:bg-[#009024] hover:text-black"
+                        [routerLink]="link.path" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: link.path === '/'}" (click)="closeMenu()">
+                        {{link.label}}
+                    </a>
+                </li>
+                }
+            </ul>
+        </div>
+    </nav>
+</header>

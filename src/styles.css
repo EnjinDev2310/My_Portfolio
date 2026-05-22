@@ -1,3 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @import 'tailwindcss';
+@theme {
+  --color-bg-primary: #0a0a0a;
+  --color-bg-secondary: #111111;
+  --color-surface: #1a1a1a;
+  --color-surface-hover: #222222;
+  --color-border: #2a2a2a;
+  --color-text-muted: #666666;
+  --color-neon: #00ff41;
+  --color-neon-dim: #00cc33;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a0a0a0;
+  --shadow-neon: 0 0 20px rgba(0, 255, 65, 0.3);
+  --shadow-neon-sm: 0 0 15px rgba(0, 255, 65, 0.15);
+  --shadow-neon-md: 0 0 25px rgba(0, 255, 65, 0.4);
+  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+}
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --surface: #1a1a1a;
+  --surface-hover: #222222;
+  --border: #2a2a2a;
+  --accent-neon: #00ff41;
+  --accend-neon-dim: #00cc33;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --text-muted: #666666;
+  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-inter);
+}
+::selection{
+  background: var(--accent-neon);
+  color: var(--bg-primary);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
