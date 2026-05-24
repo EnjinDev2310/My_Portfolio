@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SSocial } from './ssocial';
+import { SSocial } from './social-service';
 
 describe('SSocial', () => {
   let service: SSocial;

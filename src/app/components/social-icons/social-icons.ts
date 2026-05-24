@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SSocial } from '../../services/ssocial';
+import { SSocial } from '../../services/social-service';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({

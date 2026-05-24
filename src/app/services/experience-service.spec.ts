@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SExperience } from './sexperience';
+import { SExperience } from './experience-service';
 
 describe('SExperience', () => {
   let service: SExperience;

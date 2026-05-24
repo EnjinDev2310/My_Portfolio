@@ -2,7 +2,7 @@ import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Footer } from './components/footer/footer';
 import { HeaderNav } from './components/header-nav/header-nav';
-import { Icons } from './services/icons';
+import { Icons } from './services/icons-service';
 
 @Component({
   selector: 'app-root',

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SSkills } from '../../services/sskills';
+import { SSkills } from '../../services/skills-service';
 import { MatIcon } from '@angular/material/icon';
 import { NgClass } from '@angular/common';
 
