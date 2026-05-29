@@ -11,7 +11,7 @@ export class SExperience {
       role: 'Desarrollador Frontend Junior',
       company: 'Agencia Digital · Remoto',
       description:
-        'Desarrollo y mantenimiento de aplicaciones web SPA con Angular y TypeScript. Implementación de diseños responsivos con Tailwind CSS, integración con APIs REST, y optimización de rendimiento. Colaboración en equipo usando Git y metodologías ágiles.',
+        'Desarrollo y mantenimiento de aplicaciones web SPA escalables utilizando Angular y TypeScript. Maquetación de interfaces responsivas con Tailwind CSS siguiendo principios de diseño atómico. Integración con APIs REST y optimización de rendimiento mediante lazy loading y técnicas de code splitting. Colaboración activa en equipo utilizando Git con flujo de trabajo basado en ramas y metodologías ágiles.',
       tags: ['Angular', 'TypeScript', 'Tailwind', 'REST APIs'],
       current: true,
     },
@@ -20,7 +20,7 @@ export class SExperience {
       role: 'Desarrollador Freelance',
       company: 'Proyectos Varios',
       description:
-        'Creación de sitios web y landing pages para clientes pequeños. Maquetación con HTML5, CSS3 y JavaScript vanilla. Migración de proyectos a frameworks modernos. Experiencia directa con requerimientos reales y plazos de entrega.',
+        'Diseño y desarrollo de sitios web institucionales y landing pages para pequeñas y medianas empresas. Maquetación precisa con HTML5 semántico, CSS3 moderno y JavaScript vanilla. Migración exitosa de proyectos heredados a frameworks modernos, mejorando mantenibilidad y rendimiento. Gestión directa de requerimientos del cliente y cumplimiento de plazos de entrega.',
       tags: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
     },
     {
@@ -28,7 +28,7 @@ export class SExperience {
       role: 'Trainee / Autodidacta',
       company: 'Formación Intensiva',
       description:
-        'Bootcamp autodidacta de desarrollo frontend. Completé proyectos personales, contribuí a repositorios open source y construí mi portafolio desde cero. Fundamentos sólidos en algoritmos, estructura de datos y patrones de diseño.',
+        'Formación intensiva autodidacta en desarrollo frontend moderno, completando más de 20 proyectos personales desde la planificación hasta el despliegue. Contribuciones a repositorios open source y construcción de portafolio profesional desde cero. Desarrollo de fundamentos sólidos en algoritmos, estructuras de datos, patrones de diseño y principios SOLID.',
       tags: ['JavaScript', 'Git', 'Algoritmos', 'OOP'],
     },
   ]);

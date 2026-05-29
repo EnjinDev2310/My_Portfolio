@@ -41,6 +41,21 @@ export class SSkills {
       icon: 'angular',
       class: '!text-red-500 !size-10'
     },
+    {
+      name: 'GitBash',
+      icon: 'gitbash',
+      class: '!text-orange-400 !size-10'
+    },
+    {
+      name: 'npm',
+      icon: 'npm',
+      class: '!text-red-500 !size-10'
+    },
+    {
+      name: 'GitHub',
+      icon: 'github',
+      class: '!text-gray-300 !size-10'
+    },
   ]);
   readonly skills: Signal<ISkills[]> = this.#skills.asReadonly();
 }

@@ -12,6 +12,6 @@ export class About {
   readonly metrics: IMetrics[] = [
     { value: '20+', label: 'Proyectos' },
     { value: '100%', label: 'Dedicacion' },
-    { value: '1+', label: 'Años de Experiencia' },
+    { value: '3+', label: 'Años de Experiencia' },
   ]
 }

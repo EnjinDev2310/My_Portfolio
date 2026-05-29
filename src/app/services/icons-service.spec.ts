@@ -14,8 +14,8 @@ describe('Icons', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should have 13 icon names registered', () => {
-    expect(service.icons.length).toBe(13);
+  it('should have 16 icon names registered', () => {
+    expect(service.icons.length).toBe(16);
     expect(service.icons).toContain('angular');
     expect(service.icons).toContain('typescript');
     expect(service.icons).toContain('discord');

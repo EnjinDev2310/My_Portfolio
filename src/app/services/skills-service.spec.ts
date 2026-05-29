@@ -14,9 +14,9 @@ describe('SSkills', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should expose 7 skill items', () => {
+  it('should expose 10 skill items', () => {
     const skills = service.skills();
-    expect(skills.length).toBe(7);
+    expect(skills.length).toBe(10);
   });
 
   it('each item should have name, icon, class', () => {

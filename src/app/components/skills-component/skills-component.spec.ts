@@ -20,10 +20,10 @@ describe('SkillsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render 7 skill cards', () => {
+  it('should render 10 skill cards', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const cards = compiled.querySelectorAll('.skill-card');
-    expect(cards.length).toBe(7);
+    expect(cards.length).toBe(10);
   });
 
   it('each skill card should display the skill name', () => {
@@ -39,7 +39,7 @@ describe('SkillsComponent', () => {
 
   it('skills should come from SSkills service', () => {
     const skills = component.skills;
-    expect(skills.length).toBe(7);
+    expect(skills.length).toBe(10);
     expect(skills[0].name).toBe('HTML5');
     expect(skills[6].name).toBe('Angular');
   });
@@ -47,6 +47,6 @@ describe('SkillsComponent', () => {
   it('each skill should have a mat-icon with svgIcon binding', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const icons = compiled.querySelectorAll('mat-icon');
-    expect(icons.length).toBe(7);
+    expect(icons.length).toBe(10);
   });
 });
