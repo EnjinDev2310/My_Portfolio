@@ -19,12 +19,23 @@ export class CvPage {
   constructor() {
     if (isPlatformBrowser(this.platformId)) {
       window.addEventListener('afterprint', () => {
+        // Restore nav and footer visibility after printing
+        const header = document.querySelector('app-header-nav') as HTMLElement | null;
+        const footer = document.querySelector('app-footer') as HTMLElement | null;
+        if (header) header.style.display = '';
+        if (footer) footer.style.display = '';
         this.router.navigate(['/']);
       });
     }
   }
 
   printCv(): void {
-    window.print();
+    // Force-hide nav and footer so they don't overlap the print layout
+    const header = document.querySelector('app-header-nav') as HTMLElement | null;
+    const footer = document.querySelector('app-footer') as HTMLElement | null;
+    if (header) header.style.display = 'none';
+    if (footer) footer.style.display = 'none';
+    // Small delay to let DOM settle before print dialog opens
+    setTimeout(() => window.print(), 50);
   }
 }

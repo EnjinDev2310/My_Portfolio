@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { PLATFORM_ID } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { CvPage } from './cv';
@@ -41,9 +42,12 @@ describe('CvPage', () => {
   });
 
   it('should call window.print when printCv is called', () => {
+    vi.useFakeTimers();
     const printSpy = vi.spyOn(window, 'print');
     component.printCv();
+    vi.runAllTimers();
     expect(printSpy).toHaveBeenCalled();
+    vi.useRealTimers();
   });
 
   it('should NOT auto-trigger window.print on navigation', () => {
