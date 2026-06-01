@@ -9,7 +9,7 @@ export class Icons {
   private iconRegistry = inject(MatIconRegistry);
   private sanitizer = inject(DomSanitizer);
 
-  icons: string[] = ['angular', 'css', 'git', 'html', 'javascript', 'tailwind', 'typescript', 'discord', 'instagram', 'linkedin', 'reddit', 'telegram', 'email', 'gitbash', 'npm', 'github'];
+  icons: string[] = ['angular', 'css', 'download', 'git', 'html', 'javascript', 'tailwind', 'typescript', 'discord', 'instagram', 'linkedin', 'reddit', 'telegram', 'email', 'gitbash', 'npm', 'github'];
 
   constructor() {
     this.registerIcons();

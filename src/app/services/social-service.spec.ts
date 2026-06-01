@@ -14,9 +14,9 @@ describe('SSocial', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should expose 5 social items', () => {
+  it('should expose 6 social items', () => {
     const social = service.social();
-    expect(social.length).toBe(5);
+    expect(social.length).toBe(6);
   });
 
   it('each item should have name, icon, color, url', () => {

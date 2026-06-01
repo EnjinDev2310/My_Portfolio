@@ -3,4 +3,6 @@ export interface IProject {
     description: string;
     tags: string[];
     color: string;
+    gitUrl?: string;
+    webUrl?: string;
 }

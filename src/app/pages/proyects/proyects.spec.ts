@@ -20,10 +20,10 @@ describe('Proyects', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render 4 project cards', () => {
+  it('should render 2 project cards', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const cards = compiled.querySelectorAll('[class*="rounded-xl"]');
-    expect(cards.length).toBe(4);
+    expect(cards.length).toBe(2);
   });
 
   it('should display the heading', () => {
@@ -35,9 +35,9 @@ describe('Proyects', () => {
 
   it('exposes projects from SProject service', () => {
     const projects = component.projects;
-    expect(projects.length).toBe(4);
-    expect(projects[0].title).toBe('E-Commerce Dashboard');
-    expect(projects[3].title).toBe('Developer Portfolio');
+    expect(projects.length).toBe(2);
+    expect(projects[0].title).toBe('League of Legends App');
+    expect(projects[1].title).toBe('Developer Portfolio');
   });
 
   it('each project should have tags displayed', () => {

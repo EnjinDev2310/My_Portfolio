@@ -10,7 +10,7 @@ export class SSocial {
       name: 'Discord',
       icon: 'discord',
       color: '#5865F2',
-      url: 'https://discord.com'
+      url: 'https://discord.com/users/doritosonmyway'
     },
     {
       name: 'Instagram',
@@ -19,22 +19,28 @@ export class SSocial {
       url: 'https://instagram.com'
     },
     {
+      name: 'GitHub',
+      icon: 'github',
+      color: '#c9d1d9',
+      url: 'https://github.com/EnjinDev2310'
+    },
+    {
       name: 'Linkedin',
       icon: 'linkedin',
       color: '#0A66C2',
-      url: 'https://linkedin.com'
+      url: 'https://www.linkedin.com/in/jorge-luis-rodriguez-lorenzo-enjin-dev'
     },
     {
       name: 'Reddit',
       icon: 'reddit',
       color: '#FF4500',
-      url: 'https://reddit.com'
+      url: 'https://reddit.com/user/Leonheardth'
     },
     {
       name: 'Telegram',
       icon: 'telegram',
       color: '#0088CC',
-      url: 'https://t.me'
+      url: 'https://t.me/EnjinDev'
     },
   ]);
   readonly social: Signal<ISocial[]> = this.#social.asReadonly();

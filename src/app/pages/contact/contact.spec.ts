@@ -29,7 +29,7 @@ describe('Contact', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const emailLink = compiled.querySelector('a[href^="mailto:"]');
     expect(emailLink).toBeTruthy();
-    expect(emailLink!.textContent).toContain('Rodriguez.Lorenzo');
+    expect(emailLink!.textContent).toContain('eabominable');
   });
 
   it('should render mat-icon with email svgIcon', () => {

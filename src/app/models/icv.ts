@@ -2,6 +2,11 @@ export interface ICvProfile {
   name: string;
   role: string;
   about: string;
+  email?: string;
+  phone?: string;
+  photo?: string;
+  github?: string;
+  linkedin?: string;
   education: ICvEducation[];
   experience: ICvExperience[];
   skills: ICvSkill[];

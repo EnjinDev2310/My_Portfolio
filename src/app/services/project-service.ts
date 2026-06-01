@@ -7,34 +7,19 @@ import { IProject } from '../models/iproject';
 export class SProject {
   readonly #projects = signal<IProject[]>([
     {
-      title: 'E-Commerce Dashboard',
+      title: 'League of Legends App',
       description:
-        'Dashboard administrativo para una tienda online con gestión de productos, usuarios, estadísticas de ventas y autenticación segura.',
-      tags: ['Angular', 'TypeScript', 'Tailwind', 'Git'],
-      color: '#7C3AED',
+        'Explorador interactivo de personajes, lore y skins de League of Legends usando la API oficial DDragon. Búsqueda dinámica, filtros por rol y visualización detallada de cada campeón.',
+      tags: ['Angular', 'TypeScript', 'API REST', 'CSS3', 'GitHub Pages'],
+      color: '#9430E6',
+      gitUrl: 'https://github.com/EnjinDev2310/League_of_Legends_App',
+      webUrl: 'https://enjindev2310.github.io/League_of_Legends_App/',
     },
-
-    {
-      title: 'Task Manager App',
-      description:
-        'Aplicación para gestión de tareas con creación de proyectos, estados dinámicos, drag and drop y persistencia de datos.',
-      tags: ['HTML5', 'CSS3', 'JavaScript', 'Angular'],
-      color: '#06B6D4',
-    },
-
-    {
-      title: 'Weather Forecast Platform',
-      description:
-        'Plataforma del clima que consume APIs externas para mostrar pronósticos en tiempo real, búsquedas por ciudad y diseño responsive.',
-      tags: ['Angular', 'TypeScript', 'Tailwind', 'API REST'],
-      color: '#F59E0B',
-    },
-
     {
       title: 'Developer Portfolio',
       description:
-        'Portafolio profesional moderno con animaciones, proyectos destacados, formulario de contacto y diseño responsive.',
-      tags: ['Angular', 'Tailwind', 'CSS3', 'Git'],
+        'Portafolio profesional moderno con animaciones, proyectos destacados, formulario de contacto y diseño responsive. Construido con Angular 21 y Tailwind CSS 4.',
+      tags: ['Angular', 'TypeScript', 'Tailwind', 'CSS3', 'Git'],
       color: '#10B981',
     },
   ]);

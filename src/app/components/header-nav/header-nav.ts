@@ -1,14 +1,16 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { NavService } from '../../services/nav-service';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-header-nav',
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, MatIcon],
   templateUrl: './header-nav.html',
   styleUrl: './header-nav.css',
 })
 export class HeaderNav {
+  readonly router = inject(Router);
   readonly links;
   constructor(readonly navService: NavService) {
     this.links = this.navService.links();
@@ -19,5 +21,9 @@ export class HeaderNav {
   }
   closeMenu(): void {
     this.isMenuOpen.set(false);
+  }
+  downloadCv(): void {
+    this.closeMenu();
+    this.router.navigate(['/cv']);
   }
 }

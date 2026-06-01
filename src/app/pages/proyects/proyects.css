@@ -1,3 +1,6 @@
+.project-card {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
 
 .project-card:hover {
   border-color: var(--card-accent, #00ff41);

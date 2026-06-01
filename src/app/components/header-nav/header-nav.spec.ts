@@ -62,4 +62,11 @@ describe('HeaderNav', () => {
     const button = compiled.querySelector('button[aria-label="Toggle menu"]');
     expect(button).toBeTruthy();
   });
+
+  it('should have a CV download button', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const buttons = compiled.querySelectorAll('button');
+    const cvButton = Array.from(buttons).find(b => b.textContent?.trim().includes('CV'));
+    expect(cvButton).toBeTruthy();
+  });
 });

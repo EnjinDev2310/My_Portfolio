@@ -13,14 +13,14 @@ test.describe('Projects page', () => {
     await expect(page.getByText('Algunos de los proyectos en los que he trabajado')).toBeVisible();
   });
 
-  test('should show 4 project cards', async ({ page }) => {
+  test('should show 2 project cards', async ({ page }) => {
     const cards = page.locator('section .grid > div');
     const count = await cards.count();
-    expect(count).toBe(4);
+    expect(count).toBe(2);
   });
 
-  test('first project should be E-Commerce Dashboard', async ({ page }) => {
-    await expect(page.getByText('E-Commerce Dashboard')).toBeVisible();
+  test('first project should be League of Legends App', async ({ page }) => {
+    await expect(page.getByText('League of Legends App')).toBeVisible();
   });
 
   test('last project should be Developer Portfolio', async ({ page }) => {
@@ -30,12 +30,11 @@ test.describe('Projects page', () => {
   test('each card should have a "Ver proyecto" link', async ({ page }) => {
     const links = page.getByText('Ver proyecto');
     const count = await links.count();
-    expect(count).toBe(4);
+    expect(count).toBe(2);
   });
 
   test('cards should display tech tags', async ({ page }) => {
     await expect(page.getByText('Angular').first()).toBeVisible();
     await expect(page.getByText('TypeScript').first()).toBeVisible();
-    await expect(page.getByText('Tailwind').first()).toBeVisible();
   });
 });

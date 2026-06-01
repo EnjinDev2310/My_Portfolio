@@ -8,19 +8,23 @@ export class SCv {
   readonly #profile = signal<ICvProfile>({
     name: 'Jorge Luis Rodriguez Lorenzo',
     role: 'Frontend Developer',
+    email: 'eabominable@gmail.com',
+    photo: 'img/profile/profile3.png',
+    github: 'https://github.com/EnjinDev2310',
+    linkedin: 'https://www.linkedin.com/in/jorge-luis-rodriguez-lorenzo-enjin-dev',
     about: 'Ingeniero en formación con 4 años de estudios universitarios en Ingeniería Informática y 1.5 años de formación autodidacta intensiva en desarrollo frontend moderno. Dominio de HTML5, CSS3, Tailwind CSS, JavaScript, TypeScript, Angular, Git, npm y GitHub. Especializado en Angular y TypeScript para construir aplicaciones web SPA escalables y de alto rendimiento. Bilingüe — español nativo e inglés profesional.',
     education: [
       {
-        degree: 'Ingeniería Informática',
-        institution: 'Universidad',
+        degree: 'Estudios Universitarios en Ingeniería Informática (4 años cursados)',
+        institution: 'Universidad Hermanos Saiz',
         period: '2020 — 2024',
-        description: '4 años de formación en ciencias de la computación, algoritmos, estructuras de datos y pensamiento lógico.',
+        description: 'Formación en ciencias de la computación, algoritmos, estructuras de datos y desarrollo de software.',
       },
       {
         degree: 'Formación Autodidacta',
         institution: 'Online',
         period: '2024 — 2025',
-        description: '1.5 años de estudio intensivo en desarrollo frontend moderno.',
+        description: 'Un año y medio de estudios intensivos en desarrollo frontend moderno.',
       },
     ],
     languages: [
@@ -49,10 +53,10 @@ export class SCv {
       },
       {
         period: '2025 — 2026',
-        role: 'Desarrollador Freelance',
-        company: 'Proyectos Varios',
+        role: 'Proyectos Freelance',
+        company: 'Independiente',
         description:
-          'Diseño y desarrollo de sitios web institucionales y landing pages para pequeñas y medianas empresas. Maquetación precisa con HTML5 semántico, CSS3 moderno y JavaScript vanilla. Migración exitosa de proyectos heredados a frameworks modernos, mejorando mantenibilidad y rendimiento. Gestión directa de requerimientos del cliente y cumplimiento de plazos de entrega.',
+          'Desarrollo de sitios web y aplicaciones para clientes independientes.',
       },
       {
         period: '2024 — 2025',

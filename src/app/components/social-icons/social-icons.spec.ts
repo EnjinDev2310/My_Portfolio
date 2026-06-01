@@ -20,10 +20,10 @@ describe('SocialIcons', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render 5 social links', () => {
+  it('should render 6 social links', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const links = compiled.querySelectorAll('.social-link');
-    expect(links.length).toBe(5);
+    expect(links.length).toBe(6);
   });
 
   it('each link should have aria-label', () => {
@@ -36,9 +36,9 @@ describe('SocialIcons', () => {
 
   it('social data should come from SSocial service', () => {
     const social = component.social;
-    expect(social.length).toBe(5);
+    expect(social.length).toBe(6);
     expect(social[0].name).toBe('Discord');
-    expect(social[4].name).toBe('Telegram');
+    expect(social[5].name).toBe('Telegram');
   });
 
   it('each social link should have target="_blank" and rel="noopener"', () => {

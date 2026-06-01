@@ -57,3 +57,11 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
 }
+
+/* Print: hide chrome and non-CV elements */
+@media print {
+  app-header-nav,
+  app-footer {
+    display: none !important;
+  }
+}

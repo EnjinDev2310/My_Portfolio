@@ -14,10 +14,11 @@ describe('Icons', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should have 16 icon names registered', () => {
-    expect(service.icons.length).toBe(16);
+  it('should have 17 icon names registered', () => {
+    expect(service.icons.length).toBe(17);
     expect(service.icons).toContain('angular');
     expect(service.icons).toContain('typescript');
+    expect(service.icons).toContain('download');
     expect(service.icons).toContain('discord');
     expect(service.icons).toContain('email');
   });

@@ -1,0 +1,99 @@
+<header class="cv-header">
+  <div class="cv-header-info">
+    <h1>{{ cv().name }}</h1>
+    <p class="role">{{ cv().role }}</p>
+    @if (cv().email) {
+      <p class="contact-line">
+        <span class="contact-icon">✉</span> {{ cv().email }}
+      </p>
+    }
+    @if (cv().linkedin) {
+      <p class="contact-line">
+        <span class="contact-icon">💼</span> {{ cv().linkedin }}
+      </p>
+    }
+    @if (cv().github) {
+      <p class="contact-line">
+        <span class="contact-icon">🔗</span> {{ cv().github }}
+      </p>
+    }
+  </div>
+  @if (cv().photo) {
+    <img [src]="cv().photo" alt="" class="cv-photo" />
+  }
+</header>
+
+<section>
+  <h2>About</h2>
+  <p class="entry-desc">{{ cv().about }}</p>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  @for (exp of cv().experience; track exp.period + exp.company) {
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">{{ exp.role }} — {{ exp.company }}</span>
+        <span class="entry-period">{{ exp.period }}</span>
+      </div>
+      <p class="entry-desc">{{ exp.description }}</p>
+    </div>
+  }
+</section>
+
+<section>
+  <h2>Education</h2>
+  @for (edu of cv().education; track edu.period + edu.institution) {
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">{{ edu.degree }}</span>
+        <span class="entry-period">{{ edu.period }}</span>
+      </div>
+      <p class="entry-sub">{{ edu.institution }}</p>
+      <p class="entry-desc">{{ edu.description }}</p>
+    </div>
+  }
+</section>
+
+<section>
+  <h2>Projects</h2>
+  @for (project of projects(); track project.title) {
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">{{ project.title }}</span>
+      </div>
+      <p class="entry-desc">{{ project.description }}</p>
+      <div class="cv-tags">
+        @for (tag of project.tags; track tag) {
+          <span class="cv-tag">{{ tag }}</span>
+        }
+      </div>
+      <div class="project-links">
+        @if (project.gitUrl) {
+          <a [href]="project.gitUrl" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+        }
+        @if (project.webUrl) {
+          <a [href]="project.webUrl" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo</a>
+        }
+      </div>
+    </div>
+  }
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    @for (skill of cv().skills; track skill.name) {
+      <span class="tag">{{ skill.name }}</span>
+    }
+  </div>
+</section>
+
+<section>
+  <h2>Languages</h2>
+  <div class="languages-list">
+    @for (lang of cv().languages; track lang.language) {
+      <span>{{ lang.language }} — {{ lang.level }}</span>
+    }
+  </div>
+</section>

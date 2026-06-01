@@ -28,7 +28,7 @@
 
         <div class="grid lg:grid-cols-2 grid-cols-[repeat(auto-fill,minmax(80px,400px))] gap-6">
             @for (project of projects; track project.title) {
-            <div class="bg-surface border border-border rounded-xl overflow-hidden transition-all duration-200 flex flex-col hover:scale-110"
+            <div class="project-card bg-surface border border-border rounded-xl overflow-hidden transition-all duration-200 flex flex-col hover:scale-110"
                 [style.--card-accent]="project.color">
                 <div class="h-36 flex items-center justify-center relative overflow-hidden"
                     [style.background]="'linear-gradient(135deg, ' + project.color + '22, ' + project.color + '44)'">
@@ -49,7 +49,9 @@
                 </div>
                 <div class="px-5 py-3 border-t border-border">
                     <a class="inline-flex items-center gap-1.5 text-sm font-medium no-underline transition-all duration-200 hover:gap-2"
-                        [style.color]="project.color" href="#">
+                        [style.color]="project.color"
+                        [href]="project.webUrl || project.gitUrl || '#'"
+                        target="_blank" rel="noopener noreferrer">
                         Ver proyecto
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">

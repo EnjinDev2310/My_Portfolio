@@ -40,5 +40,33 @@
             }
         </div>
 
+        <h2 class="text-2xl font-bold mt-16 mb-2">
+            <span class="text-neon">/</span> Educación
+        </h2>
+        <p class="text-text-secondary mb-8 text-base">Formación académica y autodidacta</p>
+
+        @for (edu of education; track edu.period) {
+        <div class="bg-surface border border-border rounded-xl p-6 mb-6 transition-all duration-200 hover:border-neon hover:shadow-[0_0_15px_rgba(0,255,65,0.08)]">
+            <span class="text-sm font-medium text-neon">{{ edu.period }}</span>
+            <h3 class="text-lg font-semibold mt-1">{{ edu.degree }}</h3>
+            <p class="text-sm text-text-secondary mb-2">{{ edu.institution }}</p>
+            <p class="text-sm text-text-muted leading-relaxed">{{ edu.description }}</p>
+        </div>
+        }
+
+        <h2 class="text-2xl font-bold mt-16 mb-2">
+            <span class="text-neon">/</span> Idiomas
+        </h2>
+        <p class="text-text-secondary mb-8 text-base">Idiomas que manejo profesionalmente</p>
+
+        <div class="flex gap-4 flex-wrap">
+            @for (lang of languages; track lang.language) {
+            <div class="bg-surface border border-border rounded-xl p-6 flex-1 min-w-[200px] transition-all duration-200 hover:border-neon hover:shadow-[0_0_15px_rgba(0,255,65,0.08)]">
+                <h3 class="text-lg font-semibold mb-1">{{ lang.language }}</h3>
+                <span class="text-sm text-neon">{{ lang.level }}</span>
+            </div>
+            }
+        </div>
+
     </div>
 </section>

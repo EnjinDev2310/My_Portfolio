@@ -14,9 +14,9 @@ describe('SProject', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should expose 4 projects', () => {
+  it('should expose 2 projects', () => {
     const projects = service.projects();
-    expect(projects.length).toBe(4);
+    expect(projects.length).toBe(2);
   });
 
   it('each project should have title, description, tags, color', () => {
@@ -29,10 +29,10 @@ describe('SProject', () => {
     });
   });
 
-  it('first project should be E-Commerce Dashboard', () => {
+  it('first project should be League of Legends App', () => {
     const projects = service.projects();
-    expect(projects[0].title).toBe('E-Commerce Dashboard');
-    expect(projects[0].color).toBe('#7C3AED');
+    expect(projects[0].title).toBe('League of Legends App');
+    expect(projects[0].color).toBe('#9430E6');
   });
 
   it('Developer Portfolio should be the last project', () => {
