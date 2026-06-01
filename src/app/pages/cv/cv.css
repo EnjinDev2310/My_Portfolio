@@ -8,6 +8,29 @@
   background: #ffffff;
 }
 
+.print-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.25rem;
+  margin-bottom: 1.5rem;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.print-btn:hover {
+  background: #1d4ed8;
+}
+
+.no-print {
+  /* Visible on screen, hidden when printing */;
+}
+
 .cv-header {
   display: flex;
   align-items: center;
@@ -158,6 +181,10 @@ section {
 }
 
 @media print {
+  .no-print {
+    display: none;
+  }
+
   @page {
     margin: 0;
     size: A4;

@@ -21,7 +21,10 @@ export class CvPage {
       window.addEventListener('afterprint', () => {
         this.router.navigate(['/']);
       });
-      setTimeout(() => window.print(), 500);
     }
+  }
+
+  printCv(): void {
+    window.print();
   }
 }
