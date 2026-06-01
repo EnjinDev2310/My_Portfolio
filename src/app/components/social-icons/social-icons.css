@@ -22,18 +22,20 @@
 
 @media (max-width: 640px) {
   .social-link {
-    padding: 0.5rem;
+    flex: 1 0 calc(33% - 0.5rem);
+    min-width: 70px;
+    padding: 0.5rem 0.65rem;
   }
 
   .social-icon-wrapper {
     width: 40px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 12px;
   }
 
   .social-icon {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
 
   .social-label {
