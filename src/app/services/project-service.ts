@@ -21,6 +21,7 @@ export class SProject {
         'Portafolio profesional moderno con animaciones, proyectos destacados, formulario de contacto y diseño responsive. Construido con Angular 21 y Tailwind CSS 4.',
       tags: ['Angular', 'TypeScript', 'Tailwind', 'CSS3', 'Git'],
       color: '#10B981',
+      gitUrl: 'https://github.com/EnjinDev2310/My_Portfolio',
     },
   ]);
   readonly projects: Signal<IProject[]> = this.#projects.asReadonly();
