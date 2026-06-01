@@ -60,26 +60,8 @@ body {
 
 /* Print: hide chrome and non-CV elements */
 @media print {
-  html, body {
-    height: auto !important;
-    overflow: visible !important;
-  }
-
   app-header-nav,
   app-footer {
     display: none !important;
-  }
-
-  /* Neutralize fixed positioning that overflows into print */
-  app-root > app-header-nav,
-  header-nav {
-    display: none !important;
-  }
-
-  /* Ensure CV content starts at the top */
-  main,
-  router-outlet + * {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
   }
 }

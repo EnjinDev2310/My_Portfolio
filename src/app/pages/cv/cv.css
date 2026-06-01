@@ -185,11 +185,6 @@ section {
     display: none;
   }
 
-  /* Force any fixed/sticky ancestors to not interfere with print layout */
-  app-header-nav, app-footer, header, footer {
-    display: none !important;
-  }
-
   @page {
     margin: 0;
     size: A4;
