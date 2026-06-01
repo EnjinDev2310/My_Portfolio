@@ -22,6 +22,7 @@ export class SProject {
       tags: ['Angular', 'TypeScript', 'Tailwind', 'CSS3', 'Git'],
       color: '#10B981',
       gitUrl: 'https://github.com/EnjinDev2310/My_Portfolio',
+      webUrl: 'https://enjindev2310.github.io/My_Portfolio/',
     },
   ]);
   readonly projects: Signal<IProject[]> = this.#projects.asReadonly();
