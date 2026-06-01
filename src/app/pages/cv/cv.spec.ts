@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { PLATFORM_ID } from '@angular/core';
+import { provideRouter } from '@angular/router';
 
 import { CvPage } from './cv';
 
@@ -9,6 +11,7 @@ describe('CvPage', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [CvPage],
+      providers: [provideRouter([])],
     }).compileComponents();
 
     fixture = TestBed.createComponent(CvPage);
@@ -39,8 +42,23 @@ describe('CvPage', () => {
   });
 
   it('should call window.print when printCv is called', () => {
+    vi.useFakeTimers();
     const printSpy = vi.spyOn(window, 'print');
     component.printCv();
+    vi.runAllTimers();
     expect(printSpy).toHaveBeenCalled();
+    vi.useRealTimers();
+  });
+
+  it('should NOT auto-trigger window.print on navigation', () => {
+    const printSpy = vi.spyOn(window, 'print');
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({
+      imports: [CvPage],
+      providers: [provideRouter([])],
+    });
+    const f = TestBed.createComponent(CvPage);
+    f.detectChanges();
+    expect(printSpy).not.toHaveBeenCalled();
   });
 });
