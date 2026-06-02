@@ -1,6 +1,6 @@
 :host {
   display: block;
-  padding: 2.5rem;
+  padding: calc(72px + 2.5rem) 2.5rem 2.5rem;
   max-width: 210mm;
   margin: 0 auto;
   font-family: system-ui, sans-serif;
@@ -183,6 +183,14 @@ section {
 @media print {
   .no-print {
     display: none;
+  }
+
+  /* Force hide nav/footer so fixed positioning doesn't leak into PDF */
+  app-header-nav,
+  app-footer,
+  header,
+  footer {
+    display: none !important;
   }
 
   @page {

@@ -60,8 +60,20 @@ body {
 
 /* Print: hide chrome and non-CV elements */
 @media print {
+  html, body {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
   app-header-nav,
   app-footer {
+    display: none !important;
+  }
+
+  /* Neutralize fixed positioning that overflows into print */
+  body > app-root > app-header-nav,
+  app-root > app-header-nav,
+  header-nav {
     display: none !important;
   }
 }
