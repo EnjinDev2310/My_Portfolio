@@ -66,14 +66,13 @@ body {
   }
 
   app-header-nav,
+  app-header-nav > header,
   app-footer {
     display: none !important;
   }
 
   /* Neutralize fixed positioning that overflows into print */
-  body > app-root > app-header-nav,
-  app-root > app-header-nav,
-  header-nav {
+  header[class*="fixed"] {
     display: none !important;
   }
 }
