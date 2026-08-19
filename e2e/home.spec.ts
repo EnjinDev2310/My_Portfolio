@@ -10,7 +10,7 @@ test.describe('Home page', () => {
   });
 
   test('should display the subtitle', async ({ page }) => {
-    await expect(page.getByText('Frontend')).toBeVisible();
+    await expect(page.getByText('Fullstack')).toBeVisible();
     await expect(page.getByText('Developer')).toBeVisible();
   });
 

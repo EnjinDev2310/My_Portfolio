@@ -1,6 +1,6 @@
 <button class="print-btn no-print" (click)="printCv()">📥 Download CV</button>
 
-<header class="cv-header">
+<div class="cv-header">
   <div class="cv-header-info">
     <h1>{{ cv().name }}</h1>
     <p class="role">{{ cv().role }}</p>
@@ -23,7 +23,7 @@
   @if (cv().photo) {
     <img [src]="cv().photo" alt="" class="cv-photo" />
   }
-</header>
+</div>
 
 <section>
   <h2>About</h2>

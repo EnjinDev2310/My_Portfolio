@@ -7,12 +7,12 @@ import { ICvProfile, ICvEducation, ICvLanguage, ICvSkill } from '../models/icv';
 export class SCv {
   readonly #profile = signal<ICvProfile>({
     name: 'Jorge Luis Rodriguez Lorenzo',
-    role: 'Frontend Developer',
+    role: 'Fullstack Developer',
     email: 'eabominable@gmail.com',
     photo: 'img/profile/profile3.png',
     github: 'https://github.com/EnjinDev2310',
     linkedin: 'https://www.linkedin.com/in/jorge-luis-rodriguez-lorenzo-enjin-dev',
-    about: 'Ingeniero en formación con 4 años de estudios universitarios en Ingeniería Informática y 1.5 años de formación autodidacta intensiva en desarrollo frontend moderno. Dominio de HTML5, CSS3, Tailwind CSS, JavaScript, TypeScript, Angular, Git, npm y GitHub. Especializado en Angular y TypeScript para construir aplicaciones web SPA escalables y de alto rendimiento. Bilingüe — español nativo e inglés profesional.',
+    about: 'Ingeniero en formación con 4 años de estudios universitarios en Ingeniería Informática, 1.5 años de formación autodidacta intensiva en desarrollo frontend moderno y formación complementaria en backend y bases de datos. Dominio de HTML5, CSS3, Tailwind CSS, JavaScript, TypeScript, Angular, Node.js, Supabase, PostgreSQL, Docker, Git, npm y GitHub. Especializado en Angular y TypeScript para construir aplicaciones web SPA escalables y de alto rendimiento, con experiencia en APIs, bases de datos y arquitecturas fullstack. Bilingüe — español nativo e inglés profesional.',
     education: [
       {
         degree: 'Estudios Universitarios en Ingeniería Informática (4 años cursados)',
@@ -25,6 +25,12 @@ export class SCv {
         institution: 'Online',
         period: '2024 — 2025',
         description: 'Un año y medio de estudios intensivos en desarrollo frontend moderno.',
+      },
+      {
+        degree: 'Formación en Backend y Bases de Datos',
+        institution: 'Online',
+        period: '2025 — 2026',
+        description: 'Estudios intensivos en desarrollo backend, bases de datos relacionales y no relacionales, y arquitectura de APIs.',
       },
     ],
     languages: [
@@ -47,14 +53,18 @@ export class SCv {
       { name: 'C#', category: 'language' },
       { name: 'WPF', category: 'tooling' },
       { name: '.NET', category: 'tooling' },
+      { name: 'Node.js', category: 'backend' },
+      { name: 'Supabase', category: 'backend' },
+      { name: 'PostgreSQL', category: 'backend' },
+      { name: 'Docker', category: 'backend' },
     ],
     experience: [
       {
         period: '2026 — Actualidad',
-        role: 'Desarrollador Frontend Junior',
+        role: 'Desarrollador Fullstack Junior',
         company: 'Agencia Digital · Remoto',
         description:
-          'Desarrollo y mantenimiento de aplicaciones web SPA escalables utilizando Angular y TypeScript. Maquetación de interfaces responsivas con Tailwind CSS siguiendo principios de diseño atómico. Integración con APIs REST y optimización de rendimiento mediante lazy loading y técnicas de code splitting. Colaboración activa en equipo utilizando Git con flujo de trabajo basado en ramas y metodologías ágiles.',
+          'Desarrollo y mantenimiento de aplicaciones web fullstack utilizando Angular y TypeScript en frontend, Node.js y APIs REST en backend. Maquetación de interfaces responsivas con Tailwind CSS siguiendo principios de diseño atómico. Integración con bases de datos PostgreSQL y Supabase, optimización de rendimiento mediante lazy loading y técnicas de code splitting. Colaboración activa en equipo utilizando Git con flujo de trabajo basado en ramas y metodologías ágiles.',
       },
       {
         period: '2025 — 2026',

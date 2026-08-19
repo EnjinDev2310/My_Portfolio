@@ -8,11 +8,11 @@ export class SExperience {
   readonly #experience = signal<IExperience[]>([
     {
       period: '2026 — Actualidad',
-      role: 'Desarrollador Frontend Junior',
+      role: 'Desarrollador Fullstack Junior',
       company: 'Agencia Digital · Remoto',
       description:
-        'Desarrollo y mantenimiento de aplicaciones web SPA escalables utilizando Angular y TypeScript. Maquetación de interfaces responsivas con Tailwind CSS siguiendo principios de diseño atómico. Integración con APIs REST y optimización de rendimiento mediante lazy loading y técnicas de code splitting. Colaboración activa en equipo utilizando Git con flujo de trabajo basado en ramas y metodologías ágiles.',
-      tags: ['Angular', 'TypeScript', 'Tailwind', 'REST APIs'],
+        'Desarrollo y mantenimiento de aplicaciones web fullstack utilizando Angular y TypeScript en frontend, Node.js y APIs REST en backend. Maquetación de interfaces responsivas con Tailwind CSS siguiendo principios de diseño atómico. Integración con bases de datos PostgreSQL y Supabase, optimización de rendimiento mediante lazy loading y técnicas de code splitting. Colaboración activa en equipo utilizando Git con flujo de trabajo basado en ramas y metodologías ágiles.',
+      tags: ['Angular', 'TypeScript', 'Tailwind', 'REST APIs', 'Node.js', 'PostgreSQL'],
       current: true,
     },
     {

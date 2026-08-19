@@ -10,7 +10,7 @@ test.describe('About page', () => {
   });
 
   test('should display the subtitle', async ({ page }) => {
-    await expect(page.getByText('Frontend Developer')).toBeVisible();
+    await expect(page.getByText('Fullstack Developer')).toBeVisible();
   });
 
   test('should render profile image', async ({ page }) => {

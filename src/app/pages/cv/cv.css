@@ -188,7 +188,6 @@ section {
   /* Force hide nav/footer so fixed positioning doesn't leak into PDF */
   app-header-nav,
   app-footer,
-  header,
   footer {
     display: none !important;
   }
