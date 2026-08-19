@@ -7,6 +7,15 @@ import { IProject } from '../models/iproject';
 export class SProject {
   readonly #projects = signal<IProject[]>([
     {
+      title: 'CineVerse',
+      description:
+        'Plataforma de streaming de películas y series con autenticación, playlists personalizadas, búsqueda dinámica y soporte SSR. Construida con Angular 21, Supabase y la API de TMDB.',
+      tags: ['Angular', 'Supabase', 'TMDB API', 'Tailwind', 'SSR', 'Docker'],
+      color: '#E11D48',
+      gitUrl: 'https://github.com/EnjinDev2310/Movies-APP',
+      webUrl: '',
+    },
+    {
       title: 'League of Legends App',
       description:
         'Explorador interactivo de personajes, lore y skins de League of Legends usando la API oficial DDragon. Búsqueda dinámica, filtros por rol y visualización detallada de cada campeón.',

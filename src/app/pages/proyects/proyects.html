@@ -46,17 +46,30 @@
                         }
                     </div>
                 </div>
-                <div class="px-5 py-3 border-t border-border">
+                <div class="px-5 py-3 border-t border-border flex items-center gap-4">
+                    @if (project.webUrl) {
                     <a class="inline-flex items-center gap-1.5 text-sm font-medium no-underline transition-all duration-200 hover:gap-2"
                         [style.color]="project.color"
-                        [href]="project.webUrl || project.gitUrl || '#'"
+                        [href]="project.webUrl"
                         target="_blank" rel="noopener noreferrer">
-                        Ver proyecto
+                        Live Demo
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
                     </a>
+                    }
+                    @if (project.gitUrl) {
+                    <a class="inline-flex items-center gap-1.5 text-sm font-medium no-underline transition-all duration-200 hover:gap-2 text-text-secondary hover:text-text-primary"
+                        [href]="project.gitUrl"
+                        target="_blank" rel="noopener noreferrer">
+                        GitHub
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                    }
                 </div>
             </div>
             }
