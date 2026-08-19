@@ -24,6 +24,20 @@ export class SProject {
       gitUrl: 'https://github.com/EnjinDev2310/My_Portfolio',
       webUrl: 'https://enjindev2310.github.io/My_Portfolio/',
     },
+    {
+      title: 'Bar-App',
+      description: 'Aplicación de gestión de bar construida con Angular CLI.',
+      tags: ['Angular', 'TypeScript', 'Tailwind', 'CSS3'],
+      color: '#3B82F6',
+      gitUrl: 'https://github.com/EnjinDev2310/Bar-App',
+    },
+    {
+      title: 'Tienda-App',
+      description: 'Sistema de punto de venta (POS) para pequeños comercios. SQLite via WASM en el navegador, sin backend.',
+      tags: ['Angular', 'TypeScript', 'Tailwind', 'SQLite', 'WASM'],
+      color: '#F59E0B',
+      gitUrl: 'https://github.com/EnjinDev2310/Tienda-App-Shop-App',
+    },
   ]);
   readonly projects: Signal<IProject[]> = this.#projects.asReadonly();
 }

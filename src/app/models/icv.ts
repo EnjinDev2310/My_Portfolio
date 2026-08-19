@@ -27,7 +27,7 @@ export interface ICvLanguage {
 
 export interface ICvSkill {
   name: string;
-  category: 'frontend' | 'tooling' | 'language';
+  category: 'frontend' | 'tooling' | 'language' | 'database';
 }
 
 export interface ICvExperience {

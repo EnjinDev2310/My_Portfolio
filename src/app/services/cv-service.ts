@@ -42,6 +42,11 @@ export class SCv {
       { name: 'GitBash', category: 'tooling' },
       { name: 'npm', category: 'tooling' },
       { name: 'GitHub', category: 'tooling' },
+      { name: 'MySQL', category: 'database' },
+      { name: 'MongoDB', category: 'database' },
+      { name: 'C#', category: 'language' },
+      { name: 'WPF', category: 'tooling' },
+      { name: '.NET', category: 'tooling' },
     ],
     experience: [
       {

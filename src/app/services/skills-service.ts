@@ -56,6 +56,31 @@ export class SSkills {
       icon: 'github',
       class: '!text-gray-300 !size-10'
     },
+    {
+      name: 'MySQL',
+      icon: 'mysql',
+      class: '!text-sky-700 !size-10'
+    },
+    {
+      name: 'MongoDB',
+      icon: 'mongodb',
+      class: '!text-green-500 !size-10'
+    },
+    {
+      name: 'C#',
+      icon: 'csharp',
+      class: '!text-violet-600 !size-10'
+    },
+    {
+      name: 'WPF',
+      icon: 'wpf',
+      class: '!text-blue-600 !size-10'
+    },
+    {
+      name: '.NET',
+      icon: 'dotnet',
+      class: '!text-purple-600 !size-10'
+    },
   ]);
   readonly skills: Signal<ISkills[]> = this.#skills.asReadonly();
 }
